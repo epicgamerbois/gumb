@@ -9,12 +9,6 @@ client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
-    case "say":
-message.delete()
-if (message.content.startsWith("!say")) {
-message.channel.sendMessage((message.author.username) + " says: " + (message.content.replace('!say ','')));
-};
-break;
 });
 
 
