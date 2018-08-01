@@ -5,12 +5,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-});
-
 client.on("message", async (message) => {
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
@@ -31,8 +25,6 @@ client.on("message", async (message) => {
 		.setDescription(message.author.username + " says: " + args.join(" "));
 		message.channel.send({embed})
 	} 
-
-	
 });
 
 // THIS  MUST  BE  THIS  WAY
