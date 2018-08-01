@@ -9,14 +9,15 @@ client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
-});
-
-case "say":
+    case "say":
 message.delete()
 if (message.content.startsWith("!say")) {
 message.channel.sendMessage((message.author.username) + " says: " + (message.content.replace('!say ','')));
 };
 break;
+});
+
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot 
